@@ -41,7 +41,7 @@ Excel 导出按一行一人保存。隐藏的 `Contact methods JSON` 列用于�
 | [编码规范](CODE/_STANDARDS.md)、[协作约定](CONTRIBUTING.md) | 代码与提交约定 |
 | [作业博客](BLOG.md)、`images/` | 博客正文及运行截图 |
 | `examples/` | Excel 空模板和虚构数据示例 |
-| [提交清单](docs/提交清单.md)、[录屏脚本](docs/演示录屏脚本.md) | 课程提交与演示流程 |
+
 
 ## 测试
 
