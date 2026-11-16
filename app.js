@@ -250,6 +250,20 @@
  $('choose-file').onclick=()=>$('excel-file').click();
  const drop=$('file-drop');for(const type of ['dragenter','dragover'])drop.addEventListener(type,e=>{e.preventDefault();drop.classList.add('dragover');});for(const type of ['dragleave','drop'])drop.addEventListener(type,e=>{e.preventDefault();drop.classList.remove('dragover');});drop.addEventListener('drop',e=>readExcel(e.dataTransfer.files[0]));
  document.addEventListener('keydown',e=>{
+    if (
+    e.key === 'Escape' &&
+    !e.isComposing &&
+    document.activeElement === $('search') &&
+    $('search').value &&
+    !document.querySelector('dialog[open]') &&
+    !$('detail-pane').classList.contains('mobile-open')
+  ) {
+    e.preventDefault();
+    $('search').value = '';
+    render();
+    $('search').focus();
+    return;
+  }
   if(e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('search').focus();}
   if(e.key==='Escape'&&!document.querySelector('dialog[open]')){closeDetail();document.querySelector(`[data-open="${CSS.escape(selected||'')}"]`)?.focus();}
   if(e.key==='Tab'&&$('detail-pane').classList.contains('mobile-open')&&!document.querySelector('dialog[open]')){
