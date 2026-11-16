@@ -6,7 +6,12 @@
 |---|---|---:|
 | 孙俊 | 832402118 | 50% |
 | 曾景康 | 832402101 | 50% |
+## 项目地址
 
+- GitHub 仓库：https://github.com/SJA-cobe/address-book
+- 编码规范：https://github.com/SJA-cobe/address-book/blob/main/CODE/_STANDARDS.md
+- 网页演示：https://sja-cobe.github.io/address-book/
+- 云服务器部署：http://60.205.104.32
 ## 运行
 
 下载或克隆仓库后，在根目录运行：
