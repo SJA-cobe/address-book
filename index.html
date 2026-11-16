@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-type="software">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="page-type" content="software"><meta name="site-kind" content="software">
+  <title>Contacts — Address book</title><meta name="description" content="Manage contacts, save favorites, and import or export Excel files. Your data stays in this browser.">
+  <meta property="og:title" content="Contacts — Address book"><meta property="og:description" content="A personal address book with favorites, multiple contact methods, and Excel import and export."><meta property="og:type" content="website"><meta name="theme-color" content="#06525c">
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <script src="core.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to contacts</a>
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+ <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 3h14v18H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z M5 3v18 M1 7h5 M1 12h5 M1 17h5"/><circle cx="12" cy="9" r="2.5"/><path d="M8 17v-1a4 4 0 0 1 8 0v1"/></symbol>
+ <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3 M17 4a3 3 0 0 1 0 6 M21 21v-3a6 6 0 0 0-3-5"/></symbol>
+ <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+ <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14 M5 12h14"/></symbol>
+ <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3 M7 8l5-5 5 5 M4 16v4h16v-4"/></symbol>
+ <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13 M7 11l5 5 5-5 M4 17v4h16v-4"/></symbol>
+ <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+ <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M20 12H4 M10 6l-6 6 6 6"/></symbol>
+ <symbol id="i-edit" viewBox="0 0 24 24"><path d="m16 3 5 5-12 12-6 1 1-6Z M13 6l5 5"/></symbol>
+ <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18 M5 6l1 15h12l1-15 M9 6V3h6v3 M10 10v7 M14 10v7"/></symbol>
+ <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12 M18 6 6 18"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24"><path d="m8 3-4 1c-2 8 8 18 16 16l1-4-5-2-2 2-6-6 2-2Z"/></symbol>
+ <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+ <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11a9 8 0 0 1-9 8H7l-4 3v-7A8 8 0 0 1 3 7a9 8 0 0 1 18 4Z"/><path d="M7 11h.01 M12 11h.01 M17 11h.01"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2"/></symbol>
+ <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+ <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12 M9 12h12 M9 18h12 M3 6h1 M3 12h1 M3 18h1"/></symbol>
+ <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+ <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 4 3c-1 .5-1 1-1 2 M12 17h.01"/></symbol>
+ <symbol id="i-device" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8 M12 16v5"/></symbol>
+</defs></svg>
+<div class="app-shell">
+ <aside class="sidebar" aria-label="Address book navigation">
+  <a class="brand" href="./index.html"><span class="brand-icon"><svg><use href="#i-book"/></svg></span><span>Contacts<span class="brand-sub">Your everyday address book</span></span></a>
+  <div class="workspace-name"><span class="status-dot"></span><span id="space-label">Demo space</span><span class="local-chip">Local</span></div>
+  <nav class="main-nav" aria-label="Contact filters">
+   <button class="nav-item active" id="nav-all" data-view="all" aria-current="page"><svg><use href="#i-users"/></svg><span>All contacts</span><span class="nav-count" id="count-all">0</span></button>
+   <button class="nav-item" id="nav-favorites" data-view="favorites"><svg><use href="#i-star"/></svg><span>Favorites</span><span class="nav-count" id="count-favorites">0</span></button>
+  </nav>
+  <div class="group-head"><h2>Groups</h2><span>4</span></div>
+  <nav id="groups" class="group-nav" aria-label="Filter by group"></nav>
+  <div class="sidebar-bottom">
+   <div class="local-info"><svg><use href="#i-device"/></svg><div>Saved on this device<span>Back up or move with Excel</span></div></div>
+   <button class="nav-item" id="switch-space"><svg><use href="#i-arrow"/></svg><span>My address book</span></button>
+   <button class="nav-item" id="help-btn"><svg><use href="#i-help"/></svg><span>Help</span></button>
+   <div class="sidebar-footer">Software engineering project <span>v1.0</span></div>
+  </div>
+ </aside>
+ <div class="workspace">
+  <header class="topbar"><div class="breadcrumb"><svg><use href="#i-book"/></svg><span>Address book</span><svg class="small"><use href="#i-chevron"/></svg><span id="breadcrumb-current">All contacts</span></div><div class="save-state" id="save-state"><span class="status-dot"></span>Saved on this device</div></header>
+  <main id="main" tabindex="-1">
+   <div class="page-head"><div><h1 id="page-title">All contacts<span id="total-badge">0</span></h1><p id="page-description">Keep the people you contact within reach.</p></div><div class="head-actions"><button class="button secondary" id="import-btn"><svg><use href="#i-upload"/></svg><span>Import<span class="excel-word"> Excel</span></span></button><button class="button secondary" id="export-btn"><svg><use href="#i-download"/></svg><span>Export<span class="excel-word"> Excel</span></span></button><button class="button primary" id="add-btn"><svg><use href="#i-plus"/></svg>New contact</button></div></div>
+   <div class="demo-banner" id="demo-banner"><div><span class="demo-badge">Demo</span><span>These contacts are fictional. Explore freely.</span></div><button id="start-own">Create my address book<svg><use href="#i-chevron"/></svg></button></div>
+   <div class="content-layout">
+    <div class="contacts-pane">
+     <div class="list-toolbar"><label class="search-field"><svg><use href="#i-search"/></svg><input id="search" type="search" placeholder="Search name, company, or contact details" aria-label="Search contacts"><span class="key-hint" aria-hidden="true">/</span></label><div class="list-controls"><label class="sort-label" for="sort">Sort</label><select id="sort"><option value="name">Name</option><option value="recent">Recently updated</option></select><div class="view-switch" aria-label="View options"><button class="icon-button selected" id="view-list" aria-label="List view" aria-pressed="true"><svg><use href="#i-list"/></svg></button><button class="icon-button" id="view-grid" aria-label="Card view" aria-pressed="false"><svg><use href="#i-grid"/></svg></button></div></div></div>
+     <div class="mobile-filters"><button data-mobile-view="all" class="chip active">All contacts</button><button data-mobile-view="favorites" class="chip">Favorites</button><label class="sr-only" for="mobile-group">Groups</label><select id="mobile-group"><option value="all">All groups</option><option value="Work">Work</option><option value="Friends">Friends</option><option value="Family">Family</option><option value="Ungrouped">Ungrouped</option></select></div>
+     <div class="list-table" id="list-table"><div class="table-head" aria-hidden="true"><span>Name</span><span>Contact methods</span><span>Group</span><span></span></div><div id="contact-list"></div></div>
+     <div class="list-footer"><span id="result-count" role="status">0 contacts</span><span class="privacy-note"><svg><use href="#i-check"/></svg>Your data stays in this browser</span></div>
+    </div>
+    <aside class="detail-pane" id="detail-pane" aria-label="Contact details"></aside>
+   </div>
+  </main>
+  <footer class="workspace-footer"><span>Keep your contacts close.</span><span class="mobile-tools"><button id="footer-switch">My address book</button><button id="footer-help">Help</button></span><span>Excel import and export · Local storage</span></footer>
+ </div>
+</div>
+<dialog id="editor" class="editor-dialog" aria-labelledby="editor-title"><form id="contact-form" novalidate><div class="dialog-head"><h2 id="editor-title">New contact</h2><button type="button" class="icon-button" data-close="editor" aria-label="Close editor"><svg><use href="#i-close"/></svg></button></div><div class="dialog-body"><p class="form-intro">Enter a name and at least one contact method.</p><input type="hidden" id="contact-id"><div class="form-grid"><label>Name <span class="required">*</span><input id="name" name="name" maxlength="80" autocomplete="name" required><span class="field-error" id="error-name"></span></label><label>Group<select id="group"><option value="Ungrouped">Ungrouped</option><option value="Work">Work</option><option value="Friends">Friends</option><option value="Family">Family</option></select></label><label>Company / organization<input id="company" maxlength="120" autocomplete="organization"></label><label>Job title<input id="role" maxlength="120" autocomplete="organization-title"></label></div><div class="methods-heading"><h3>Contact methods <span class="required">*</span></h3><button type="button" class="text-button" id="add-method"><svg><use href="#i-plus"/></svg>Add contact method</button></div><div id="method-rows"></div><p class="field-error" id="error-methods" aria-live="polite"></p><label class="notes-label">Notes<textarea id="notes" rows="3" maxlength="10000" placeholder="Add context, reminders, or contact preferences"></textarea><span class="field-error" id="error-notes"></span></label><label class="favorite-label"><input id="favorite" type="checkbox"><svg><use href="#i-star"/></svg>Add to favorites</label><p class="field-error" id="error-save" role="alert"></p></div><div class="dialog-actions"><button type="button" class="button secondary" data-close="editor">Cancel</button><button type="submit" class="button primary" id="save-contact">Save contact</button></div></form></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><div class="dialog-head"><h2 id="import-title">Import contacts</h2><button class="icon-button" data-close="import-dialog" aria-label="Close import"><svg><use href="#i-close"/></svg></button></div><div class="dialog-body"><p>Choose an Excel file, review the preview, then add contacts to this space.</p><div class="file-drop" id="file-drop"><svg><use href="#i-upload"/></svg><strong>Choose or drop an Excel file</strong><span>.xlsx / .xls · Up to 5 MB and 10,000 contacts</span><button class="button secondary" id="choose-file" type="button">Choose file</button><input id="excel-file" type="file" aria-label="Excel file" tabindex="-1" accept=".xlsx,.xls" class="sr-only"></div><div class="import-instructions"><span>First import? Start with the standard template.</span><button class="text-button" id="template-btn"><svg><use href="#i-download"/></svg>Download Excel template</button></div><div id="import-preview" aria-live="polite"></div></div><div class="dialog-actions"><button class="button secondary" data-close="import-dialog">Cancel</button><button class="button primary" id="confirm-import" disabled>Confirm import</button></div></dialog>
+<dialog id="confirm-dialog" class="small-dialog" aria-labelledby="confirm-title"><div class="dialog-head"><h2 id="confirm-title">Delete contact</h2><button class="icon-button" data-close="confirm-dialog" aria-label="Close confirmation"><svg><use href="#i-close"/></svg></button></div><div class="dialog-body"><p id="confirm-text"></p></div><div class="dialog-actions"><button class="button secondary" data-close="confirm-dialog">Keep contact</button><button class="button danger" id="confirm-delete">Delete contact</button></div></dialog>
+<dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title"><div class="dialog-head"><h2 id="help-title">Help</h2><button class="icon-button" data-close="help-dialog" aria-label="Close help"><svg><use href="#i-close"/></svg></button></div><div class="dialog-body help-copy"><h3>Manage contacts</h3><p>Choose “New contact” and enter a name and at least one contact method. Add phone numbers, email addresses, WeChat, QQ, addresses, or a custom type. You can add more than one of each type.</p><h3>Favorites and search</h3><p>Select the star to add a favorite, then find it in Favorites. Search names, companies, notes, and all contact methods, with optional group filters. Press / to focus search.</p><h3>Excel import and export</h3><p>Exports include every contact in the current space, regardless of filters. Each contact has one row; multiple values of the same type use separate lines within a cell. The hidden “Contact methods JSON” column preserves custom types and line breaks. Before editing visible contact-method columns, clear the JSON cell for that row.</p><p>Preview before importing. Exact duplicates are skipped; people with the same name but different details stay separate. Invalid rows show a row number and reason. Confirm to add valid contacts without replacing existing records. Both English and original Chinese column headers are accepted.</p><h3>About your data</h3><p>Your data stays in this browser. It is not uploaded or synced across devices. Export regular backups before clearing browser data. Private browsing may remove your data when the window closes.</p><h3>Demo and personal spaces</h3><p>All demo contacts are fictional. Demo and personal spaces are stored separately. Switching spaces does not merge records, and deleting demo contacts does not affect your address book.</p></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="storage-alert" class="storage-alert" role="alert" hidden></div>
+</body></html>
+
+

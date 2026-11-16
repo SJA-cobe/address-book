@@ -1,0 +1,14 @@
+{
+  "name": "address-book",
+  "version": "1.0.0",
+  "private": true,
+  "description": "English address book course project",
+  "scripts": {
+    "start": "python -m http.server 5173",
+    "test": "node --test TEST/core.test.cjs",
+    "check": "node --check core.js && node --check app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
