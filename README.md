@@ -45,7 +45,7 @@ Excel exports use one row per contact. The hidden `Contact methods JSON` column 
 | `vendor/`, `fonts/`, `icon.svg` | Runtime resources and third-party licenses |
 | [Design Documentation](docs/设计说明.md) | Requirements, architecture, data structures, and implementation |
 | [Acceptance Report](docs/验收报告.md), `TEST/` | Test results, coverage, and test code |
-| [Coding Standards](CODE/_STANDARDS.md), [Contribution Guidelines](CONTRIBUTING.md) | Coding and contribution conventions |
+| [Coding Standards](CODE/_STANDARDS.md) | Coding conventions |
 | `images/` | Application screenshots |
 | `examples/` | An Excel import template and fictional sample data |
 
