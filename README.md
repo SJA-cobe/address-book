@@ -13,6 +13,8 @@ A software engineering course project with an English interface. It supports con
 - [Coding Standards](https://github.com/SJA-cobe/address-book/blob/main/CODE/_STANDARDS.md)
 - [GitHub Pages Demo](https://sja-cobe.github.io/address-book/)
 - [Cloud Server Deployment](http://60.205.104.32)
+- - [Release v1.0.0](https://github.com/SJA-cobe/address-book/releases/tag/v1.0.0)
+- [Demonstration Video](https://github.com/SJA-cobe/address-book/releases/download/v1.0.0/address-book-demo.mp4)
 
 ## Getting Started
 
